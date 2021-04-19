@@ -1,0 +1,39 @@
+### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+
+focus_tree = {
+	id = italian_focus
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = ITA
+		}
+	}
+	
+	default = no
+	
+		focus = {
+		id = Solve_Unemployment
+		icon = GFX_goal_generic_construction
+		x = 6
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		remove_ideas = unemployment
+		add_timed_idea = { idea = solving_unemployment days = 70 }
+		
+		}
+		
+	}
